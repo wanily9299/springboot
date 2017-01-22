@@ -1,8 +1,14 @@
-FROM java:8
+FROM maven:latest
 
 MAINTAINER zhouwei
 
-ADD ../target/springboot-0.0.1-SNAPSHOT.jar app.jar
+RUN cd ..
+
+RUN pwd
+
+RUN mvn clean install
+
+ADD ./target/springboot-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
