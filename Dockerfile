@@ -10,7 +10,7 @@ COPY . /tmp
 
 WORKDIR /tmp
 
-RUN mvn clean install
+RUN mvn clean package -Dmaven.test.skip=true
 
 RUN pwd
 
