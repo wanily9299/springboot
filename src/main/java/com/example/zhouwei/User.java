@@ -1,17 +1,19 @@
 package com.example.zhouwei;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.Id;
 
 /**
  * Created by zhouwei on 2017/1/12.
  */
 @Data
-@Entity(name = "s_user")
+@AllArgsConstructor
+//@Entity(name = "s_user")
 public class User {
 
     public User(){
@@ -21,11 +23,11 @@ public class User {
         this.name = name;
     }
 
-    @Column(name="s_name")
+    //@Column(name="s_name")
     public String name;
 
-    @Id
-    @GeneratedValue
-    public Long id;
+    //@Id
+    //@GeneratedValue
+    public String id;
 
 }
